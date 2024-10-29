@@ -34,7 +34,7 @@ workflows:
       - name: Flutter build ipa and automatic versioning
         script: |
           # See the following link about getting the latest App Store or TestFlight version - https://docs.codemagic.io/knowledge-codemagic/build-versioning/#app-store-or-testflight-latest-build-number
-          flutter build ipa --release -t lib/main_production.dart \
+          flutter build ipa --flavor production -t lib/main_production.dart --release\
             --build-name=1.0.0 \
             --build-number=1 \
             --export-options-plist=/Users/builder/export_options.plist
