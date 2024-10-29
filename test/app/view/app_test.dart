@@ -1,6 +1,6 @@
-import 'package:flutter_test/flutter_test.dart';
 import 'package:codemagic_flutter_conf/app/app.dart';
 import 'package:codemagic_flutter_conf/counter/counter.dart';
+import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   group('App', () {
