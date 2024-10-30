@@ -1,0 +1,13 @@
+workflows:
+  sample-workflow:
+    name: Codemagic Sample Workflow
+    # 1 - 120 minutes
+    max_build_duration: 120
+    # mac_mini_m2, linux_x2 or windows_x2
+    instance_type: mac_mini_m2
+  sample-workflow-2:
+    name: Codemagic Sample Workflow 2
+    # 1 - 120 minutes
+    max_build_duration: 50
+    # mac_mini_m2, linux_x2 or windows_x2
+    instance_type: linux_x2

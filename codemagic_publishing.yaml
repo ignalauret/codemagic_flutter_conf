@@ -1,0 +1,21 @@
+publishing:
+  email:
+    recipients:
+      - nacho@somniosoftware.com
+      - juanjo@somniosoftware.com
+    notify:
+      success: true
+      failure: false
+  slack:
+    channel: "#builds"
+    notify_on_build_start: true
+    notify:
+      success: true
+      failure: false
+  app_store_connect:
+    auth: integration
+    submit_to_testflight: true
+    beta_groups:
+      - Somnio QA
+      - Client QA
+    submit_to_app_store: false

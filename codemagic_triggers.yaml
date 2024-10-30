@@ -1,0 +1,24 @@
+triggering:
+  events:
+    - push
+    - pull_request
+    - pull_request_labeled #GitHub only
+    - tag
+  branch_patterns:
+    - pattern: "*"
+      include: true
+      source: true
+    - pattern: excluded-target
+      include: false
+      source: false
+    - pattern: included-source
+      include: true
+      source: true
+  tag_patterns:
+    - pattern: "*"
+      include: true
+    - pattern: excluded-tag
+      include: false
+    - pattern: included-tag
+      include: true
+  cancel_previous_builds: false

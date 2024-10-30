@@ -1,0 +1,18 @@
+scripts:
+  - echo "single line script"
+  - name: Flutter test
+    script: flutter test
+    ignore_failure: true
+  - |
+    #!/usr/bin/env python3
+
+    print('Multiline python script')
+  - name: Build for iOS
+    script: flutter build ios
+artifacts:
+  - build/**/outputs/apk/**/*.apk
+  - build/**/outputs/**/*.aab
+  - build/**/outputs/**/mapping.txt
+  - build/ios/ipa/*.ipa
+  - build/macos/**/*.pkg
+  - /tmp/xcodebuild_logs/*.log

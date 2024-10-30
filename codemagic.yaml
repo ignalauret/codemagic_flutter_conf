@@ -35,15 +35,14 @@ workflows:
         script: |
           # See the following link about getting the latest App Store or TestFlight version - https://docs.codemagic.io/knowledge-codemagic/build-versioning/#app-store-or-testflight-latest-build-number
           flutter build ipa --flavor production -t lib/main_production.dart --release\
-            --build-name=1.0.0 \
-            --build-number=1 \
+            --build-name=1.0.1 \
+            --build-number=2 \
             --export-options-plist=/Users/builder/export_options.plist
     artifacts:
       - build/ios/ipa/*.ipa
       - /tmp/xcodebuild_logs/*.log
       - flutter_drive.log
     publishing:
-      # See the following link for details about email publishing - https://docs.codemagic.io/publishing-yaml/distribution/#email
       email:
         recipients:
           - ilauret@somniosoftware.com
